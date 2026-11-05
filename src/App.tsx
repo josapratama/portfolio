@@ -17,6 +17,7 @@ import NotFoundPage from "@/pages/public/NotFoundPage";
 
 // Admin — layout
 import AdminLoginPage from "@/pages/admin/layout/AdminLoginPage";
+import AuthCallbackPage from "@/pages/admin/layout/AuthCallbackPage";
 import AdminLayout from "@/pages/admin/layout/AdminLayout";
 
 // Admin — dashboard & misc
@@ -74,6 +75,7 @@ export default function App() {
           </Route>
 
           {/* ── Admin ── */}
+          <Route path="/auth/callback" element={<AuthCallbackPage />} />
           <Route path="/admin/login" element={<AdminLoginPage />} />
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<DashboardPage />} />

@@ -6,6 +6,10 @@ export const adminAPI = {
   // Auth
   login: (email: string, password: string) =>
     adminApi.post('/auth/login', { email, password }),
+  authHubCallback: (code: string, redirect_uri: string) =>
+    adminApi.post('/auth/authhub/callback', { code, redirect_uri }),
+  getAuthHubConfig: () =>
+    adminApi.get('/auth/authhub/config').then(unwrap<{ authhub_url: string; client_id: string; client_slug: string }>),
   logout: () => adminApi.post('/auth/logout'),
   me: () => adminApi.get('/auth/me').then(unwrap<{ id: string; email: string; name: string }>),
 
