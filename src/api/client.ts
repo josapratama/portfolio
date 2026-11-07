@@ -1,8 +1,19 @@
 import axios from 'axios'
 import { useAuthStore } from '@/store/authStore'
 
-const rawBase = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/+$/, '')
-export const BASE_URL = rawBase.replace(/\/api(\/v1)?$/, '')
+function resolveBaseUrl(): string {
+  const envUrl = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/+$/, '')
+  if (envUrl) return envUrl.replace(/\/api(\/v1)?$/, '')
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname
+    if (host.includes('josapratama.com') || host.includes('josapratama.cloud')) {
+      return 'https://josapratama-api.josapratama.com'
+    }
+  }
+  return ''
+}
+
+export const BASE_URL = resolveBaseUrl()
 
 // Public API client — no auth headers needed
 export const publicApi = axios.create({
