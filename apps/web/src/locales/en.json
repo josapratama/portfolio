@@ -144,6 +144,26 @@
     "select_all": "Select All",
     "selected_count": "{count} items selected"
   },
+  "hero": {
+    "greeting": "Hello, I am",
+    "role": "Full-Stack Software Engineer & Cloud Architect",
+    "hire_me": "Get In Touch",
+    "download_cv": "Download Resume",
+    "bio": "Crafting resilient cloud infrastructure, modern web applications, and intuitive developer experiences."
+  },
+  "projects": {
+    "featured": "Featured Works & Experiments",
+    "view_live": "Live Demo",
+    "source_code": "Source Code",
+    "tag": "Featured Works",
+    "all_projects": "All Projects"
+  },
+  "contact": {
+    "title": "Let's Build Something Together",
+    "send_message": "Send Message",
+    "success_notice": "Thank you! I will get back to you within 24 hours.",
+    "tag": "Contact"
+  },
   "validation": {
     "required": "This field is required",
     "invalid_email": "Please enter a valid email address",
@@ -181,6 +201,11 @@
   },
   "language": {
     "switch": "Switch Language"
+  },
+  "skills": {
+    "title": "Technical Arsenal & Frameworks",
+    "experience_years": "{years}+ Years Commercial Experience",
+    "tag": "Skills"
   },
   "common": {
     "loading": "Loading...",
@@ -341,31 +366,6 @@
     "ip": "IP",
     "device": "Device",
     "last_active": "Last Active"
-  },
-  "hero": {
-    "greeting": "Hello, I am",
-    "role": "Full-Stack Software Engineer & Cloud Architect",
-    "hire_me": "Get In Touch",
-    "download_cv": "Download Resume",
-    "bio": "Crafting resilient cloud infrastructure, modern web applications, and intuitive developer experiences."
-  },
-  "projects": {
-    "featured": "Featured Works & Experiments",
-    "view_live": "Live Demo",
-    "source_code": "Source Code",
-    "tag": "Featured Works",
-    "all_projects": "All Projects"
-  },
-  "contact": {
-    "title": "Let's Build Something Together",
-    "send_message": "Send Message",
-    "success_notice": "Thank you! I will get back to you within 24 hours.",
-    "tag": "Contact"
-  },
-  "skills": {
-    "title": "Technical Arsenal & Frameworks",
-    "experience_years": "{years}+ Years Commercial Experience",
-    "tag": "Skills"
   },
   "portfolio": {
     "greeting": "Hello, I'm",

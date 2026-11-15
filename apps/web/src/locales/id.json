@@ -144,6 +144,26 @@
     "select_all": "Pilih Semua",
     "selected_count": "{count} item dipilih"
   },
+  "hero": {
+    "greeting": "Halo, saya",
+    "role": "Software Engineer Full-Stack & Arsitek Cloud",
+    "hire_me": "Hubungi Saya",
+    "download_cv": "Unduh CV / Resume",
+    "bio": "Membangun infrastruktur cloud tangguh, aplikasi web modern, dan pengalaman pengembang yang intuitif."
+  },
+  "projects": {
+    "featured": "Karya Unggulan & Eksperimen",
+    "view_live": "Lihat Demo",
+    "source_code": "Kode Sumber",
+    "tag": "Karya Unggulan",
+    "all_projects": "Semua Proyek"
+  },
+  "contact": {
+    "title": "Mari Bangun Sesuatu Bersama",
+    "send_message": "Kirim Pesan Sekarang",
+    "success_notice": "Terima kasih! Saya akan membalas pesan Anda dalam 24 jam.",
+    "tag": "Kontak"
+  },
   "validation": {
     "required": "Kolom ini wajib diisi",
     "invalid_email": "Masukkan alamat email yang valid",
@@ -181,6 +201,11 @@
   },
   "language": {
     "switch": "Ganti Bahasa"
+  },
+  "skills": {
+    "title": "Keahlian Teknis & Framework",
+    "experience_years": "{years}+ Tahun Pengalaman Profesional",
+    "tag": "Keahlian"
   },
   "common": {
     "loading": "Memuat...",
@@ -341,31 +366,6 @@
     "ip": "IP",
     "device": "Perangkat",
     "last_active": "Terakhir Aktif"
-  },
-  "hero": {
-    "greeting": "Halo, saya",
-    "role": "Software Engineer Full-Stack & Arsitek Cloud",
-    "hire_me": "Hubungi Saya",
-    "download_cv": "Unduh CV / Resume",
-    "bio": "Membangun infrastruktur cloud tangguh, aplikasi web modern, dan pengalaman pengembang yang intuitif."
-  },
-  "projects": {
-    "featured": "Karya Unggulan & Eksperimen",
-    "view_live": "Lihat Demo",
-    "source_code": "Kode Sumber",
-    "tag": "Karya Unggulan",
-    "all_projects": "Semua Proyek"
-  },
-  "contact": {
-    "title": "Mari Bangun Sesuatu Bersama",
-    "send_message": "Kirim Pesan Sekarang",
-    "success_notice": "Terima kasih! Saya akan membalas pesan Anda dalam 24 jam.",
-    "tag": "Kontak"
-  },
-  "skills": {
-    "title": "Keahlian Teknis & Framework",
-    "experience_years": "{years}+ Tahun Pengalaman Profesional",
-    "tag": "Keahlian"
   },
   "portfolio": {
     "greeting": "Halo, saya",
