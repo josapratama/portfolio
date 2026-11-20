@@ -1,12 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ExternalLink, MapPin, Download } from "lucide-react";
 import { getText } from "@/types";
 import { PLATFORM_ICONS } from "./platformIcons";
-import { pdf } from "@react-pdf/renderer";
-import { CVDocument } from "@/features/cv";
 import type { HeroContent, SocialLink, Lang, ResumeSettings } from "@/types";
-import type { CVData, CVTemplate, CVPageSize } from "@/features/cv/types";
 
 interface Props {
   hero: HeroContent;
@@ -29,28 +25,6 @@ export default function HeroSection({
   socialLinks,
   resume,
 }: Props) {
-  const [generatingCV, setGeneratingCV] = useState(false);
-
-  const handleBuilderDownload = async () => {
-    if (!resume?.cv_builder_data) return;
-    setGeneratingCV(true);
-    try {
-      const cvData = resume.cv_builder_data as unknown as CVData;
-      const template = (resume.cv_template || "classic") as CVTemplate;
-      const pageSize = (resume.cv_page_size || "A4") as CVPageSize;
-      const blob = await pdf(
-        <CVDocument cv={cvData} template={template} pageSize={pageSize} />,
-      ).toBlob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${cvData.name || "cv"}.pdf`;
-      a.click();
-      URL.revokeObjectURL(url);
-    } finally {
-      setGeneratingCV(false);
-    }
-  };
   return (
     <section
       style={{
@@ -184,37 +158,18 @@ export default function HeroSection({
               <Link to="/contact" className="btn-secondary">
                 {ctaSecondary}
               </Link>
-              {resume?.enable_cv_download &&
-                resume.cv_source === "url" &&
-                resume.cv_url && (
-                  <a
-                    href={resume.cv_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-secondary"
-                    style={{ display: "flex", alignItems: "center", gap: 6 }}
-                  >
-                    <Download size={14} />
-                    {getText(resume.button_label, lang) ||
-                      (lang === "en" ? "Download CV" : "Unduh CV")}
-                  </a>
-                )}
-              {resume?.enable_cv_download && resume.cv_source === "builder" && (
-                <button
-                  type="button"
-                  onClick={handleBuilderDownload}
-                  disabled={generatingCV}
+              {resume?.enable_cv_download && resume.cv_url && (
+                <a
+                  href={resume.cv_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-secondary"
                   style={{ display: "flex", alignItems: "center", gap: 6 }}
                 >
                   <Download size={14} />
-                  {generatingCV
-                    ? lang === "en"
-                      ? "Generating..."
-                      : "Membuat..."
-                    : getText(resume.button_label, lang) ||
-                      (lang === "en" ? "Download CV" : "Unduh CV")}
-                </button>
+                  {getText(resume.button_label, lang) ||
+                    (lang === "en" ? "Download CV" : "Unduh CV")}
+                </a>
               )}
             </div>
             {socialLinks.length > 0 && (
